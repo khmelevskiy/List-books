@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Books</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Books">
+	<meta name="author" content="Хмелевский Александр">
+	<script src = "js/jquery-1.12.3.min.js"> </script>
+	<script src = "js/bootstrap.min.js"> </script>
+	<script src = "js/dataBooks.js"> </script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class = "span6">
+				<center>
+					<form  role="form">
+						<div class="well well-small">
+							Add new book:
+						</div>
+						<div class="form-group" >
+							<input type="text" class="form-control" id="author" placeholder="author">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="publicationDate" placeholder="publication date">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="nameBook" placeholder="name book">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="numberOfPages" placeholder="number of pages">
+						</div>
+						<div class="form-group">
+							<input type="button" class = "btn btn-primary" value="Add book" onClick="AddItem();" ID="add">
+						</div>
+						
+					</form>
+				</center>
+			</div>
+			<div class = "span6">
+				<center>
+					<div class = "caption">
+						<div class="well well-small">
+							List book:
+						</div>
+						<form role="form" name="addBook">
+							<div ID="items">
+							</div>
+						</form>
+					</div>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<center>
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Changing the description of the book:</h4>
+					</div>
+					<div class="modal-body" id = "modalEdit" style="display: none;">
+						<div class="form-group" >
+							<strong style="margin-right: 60px;">Author:</strong>
+							<input type="text" class="form-control" id="authorEdit" placeholder="author">
+						</div>
+						<div class="form-group">
+							<strong style="margin-right: 0px;">Publication date:</strong>
+							<input type="text" class="form-control" id="publicationDateEdit" placeholder="publication date">
+						</div>
+						<div class="form-group">
+							<strong style="margin-right: 33px;">Name book:</strong>
+							<input type="text" class="form-control" id="nameBookEdit" placeholder="name book">
+						</div>
+						<div class="form-group">
+							<strong>Number of page:</strong>
+							<input type="text" class="form-control" id="numberOfPagesEdit" placeholder="number of page">
+						</div>
+						<input type="hidden" id = hideField>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" onClick = "saveChange();">Save</button>
+					</div>
+				</div>
+			</center>
+		</div>
+	</div>
+</body>
+</html>
