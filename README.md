@@ -18,3 +18,4 @@
     The page should be adaptive (on mobile devices (when
     insufficient width of the browser window) a list of the books should go under the form
     add). The page must be opened from the disc in your browser.
+
