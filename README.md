@@ -19,3 +19,4 @@
     insufficient width of the browser window) a list of the books should go under the form
     add). The page must be opened from the disc in your browser.
 
+**Сheck for correct data entry has not been realized, since the main goal was to demonstrate the ability to work with LocalStotage.**
