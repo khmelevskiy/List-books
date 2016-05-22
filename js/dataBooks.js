@@ -39,7 +39,7 @@ function AddItem() {
 		}
 		catch (e) {
 			if (e == QUOTA_EXCEEDED_ERR) {
-				alert('Локальное хранилище переполнено');
+				alert('Local storage is full!');
 			}
 		}
 		var div=document.getElementById("items");
@@ -61,7 +61,7 @@ function AddItem() {
 		div.insertBefore(newnode,button);
 	}
 	else {
-		alert('Заполните все поля!');
+		alert('Fill in all the fields!');
 	}
 };
 
@@ -108,7 +108,7 @@ function saveChange() {
 		$('#modalEdit').modal('hide');
 	}
 	else
-		alert('Заполните все поля!');
+		alert('Fill in all the fields!');
 }
 
 function localStorageMax() {
